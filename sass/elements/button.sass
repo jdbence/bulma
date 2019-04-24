@@ -42,7 +42,7 @@ $button-static-border-color: $grey-lighter !default
 =button-large
   font-size: $size-large
 
-.button
+%button
   @extend %control
   @extend %unselectable
   background-color: $button-background-color
@@ -222,12 +222,12 @@ $button-static-border-color: $grey-lighter !default
     padding-left: 1em
     padding-right: 1em
 
-.buttons
+%buttons
   align-items: center
   display: flex
   flex-wrap: wrap
   justify-content: flex-start
-  .button
+  %button
     margin-bottom: 0.5rem
     &:not(:last-child):not(.is-fullwidth)
       margin-right: 0.5rem
@@ -237,16 +237,16 @@ $button-static-border-color: $grey-lighter !default
     margin-bottom: 1rem
   // Sizes
   &.are-small
-    .button:not(.is-normal):not(.is-medium):not(.is-large)
+    %button:not(.is-normal):not(.is-medium):not(.is-large)
       +button-small
   &.are-medium
-    .button:not(.is-small):not(.is-normal):not(.is-large)
+    %button:not(.is-small):not(.is-normal):not(.is-large)
       +button-medium
   &.are-large
-    .button:not(.is-small):not(.is-normal):not(.is-medium)
+    %button:not(.is-small):not(.is-normal):not(.is-medium)
       +button-large
   &.has-addons
-    .button
+    %button
       &:not(:first-child)
         border-bottom-left-radius: 0
         border-top-left-radius: 0
